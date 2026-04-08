@@ -52,13 +52,13 @@ app.all(/.*/, (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(path.join(__dirname, "../frontend/dist")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
-//   });
-// }
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+  });
+}
 app.use(golobalError);
 
 const PORT = 8000;
