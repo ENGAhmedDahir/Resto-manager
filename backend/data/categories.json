@@ -1,0 +1,142 @@
+[
+  {
+    "_id": "693d6e96db623e37bb2df507",
+    "name": "Appetizers",
+    "image": "🥟",
+    "isActive": true,
+    "description": "Small dishes served before the main course."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df508",
+    "name": "Soups",
+    "image": "🍲",
+    "isActive": true,
+    "description": "Warm and comforting soups, perfect to start a meal."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df509",
+    "name": "Salads",
+    "image": "🥗",
+    "isActive": true,
+    "description": "Fresh and healthy salads with seasonal ingredients."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df50a",
+    "name": "Grilled Meats",
+    "image": "🥩",
+    "isActive": true,
+    "description": "Juicy grilled meats cooked to perfection."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df50b",
+    "name": "Burgers",
+    "image": "🍔",
+    "isActive": true,
+    "description": "Classic and gourmet burgers with fresh toppings."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df50c",
+    "name": "Pizzas",
+    "image": "🍕",
+    "isActive": true,
+    "description": "Wood-fired or classic pizzas with a variety of toppings."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df50d",
+    "name": "Pasta",
+    "image": "🍝",
+    "isActive": true,
+    "description": "Italian pasta dishes with rich sauces and flavors."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df50e",
+    "name": "Seafood",
+    "image": "🦞",
+    "isActive": true,
+    "description": "Fresh fish, shrimp, crab, and other seafood delicacies."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df50f",
+    "name": "Sandwiches",
+    "image": "🥪",
+    "isActive": true,
+    "description": "Classic and specialty sandwiches for lunch or snacks."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df510",
+    "name": "Breakfast",
+    "image": "🍳",
+    "isActive": true,
+    "description": "Breakfast meals including eggs, pancakes, and more."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df511",
+    "name": "Brunch",
+    "image": "🥞",
+    "isActive": true,
+    "description": "Late morning meals combining breakfast and lunch items."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df512",
+    "name": "Desserts",
+    "image": "🍰",
+    "isActive": true,
+    "description": "Sweet treats including cakes, pastries, and ice cream."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df513",
+    "name": "Beverages",
+    "image": "🥤",
+    "isActive": true,
+    "description": "Soft drinks, juices, smoothies, and specialty drinks."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df514",
+    "name": "Coffee & Tea",
+    "image": "☕",
+    "isActive": true,
+    "description": "Hot and iced coffees and teas."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df515",
+    "name": "Cocktails",
+    "image": "🍹",
+    "isActive": true,
+    "description": "Alcoholic mixed drinks and cocktails."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df516",
+    "name": "Wines",
+    "image": "🍷",
+    "isActive": true,
+    "description": "Red, white, and sparkling wines."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df517",
+    "name": "Beer",
+    "image": "🍺",
+    "isActive": true,
+    "description": "Craft and commercial beers."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df518",
+    "name": "Vegan",
+    "image": "🥬",
+    "isActive": true,
+    "description": "Plant-based dishes for vegan diets."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df519",
+    "name": "Gluten-Free",
+    "image": "🌾",
+    "isActive": true,
+    "description": "Gluten-free options for sensitive diets."
+  },
+  {
+    "_id": "693d6e96db623e37bb2df51a",
+    "name": "Kids Menu",
+    "image": "🧒",
+    "isActive": true,
+    "description": "Child-friendly meals with smaller portions."
+  }
+]

@@ -1,0 +1,514 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-gray-0: var(--gay-0);
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-success: hsl(var(--success));
+  --color-success-foreground: hsl(var(--success-foreground));
+
+  --color-warning: hsl(var(--warning));
+  --color-warning-foreground: hsl(var(--warning-foreground));
+
+  --color-info: hsl(var(--info));
+  --color-info-foreground: hsl(var(--info-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-glow: var(--shadow-glow);
+  --shadow-card: var(--shadow-card);
+  --shadow-elevated: var(--shadow-elevated);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-slide-in-right: slide-in-right 0.3s ease-out;
+  --animate-slide-in-left: slide-in-left 0.3s ease-out;
+  --animate-scale-in: scale-in 0.2s ease-out;
+  --animate-shimmer: shimmer 2s infinite linear;
+  --animate-pulse: pulse 2s infinite;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes shimmer {
+    from {
+      background-position: -200% 0;
+    }
+    to {
+      background-position: 200% 0;
+    }
+  }
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+@utility glass {
+  @apply bg-card/80 backdrop-blur-xl border border-border/50;
+}
+@utility glow {
+  box-shadow: var(--shadow-glow);
+}
+@utility gradient-primary {
+  background: var(--gradient-primary);
+}
+@utility gradient-card {
+  background: var(--gradient-card);
+}
+@utility text-gradient {
+  @apply bg-clip-text text-transparent;
+  background: var(--gradient-primary);
+}
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted)) transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+}
+
+/* =========================================================
+   COMPONENTS
+========================================================= */
+@utility stat-card {
+  @apply relative overflow-hidden rounded-xl border border-border bg-card p-6;
+  box-shadow: var(--shadow-card);
+
+  &::before {
+    content: "";
+    @apply absolute inset-0 opacity-50;
+    background: var(--gradient-card);
+  }
+}
+@utility pos-item {
+  @apply relative overflow-hidden rounded-xl border border-border bg-card p-4 cursor-pointer transition-all duration-200;
+
+  &:hover {
+    @apply border-primary/50;
+    box-shadow: var(--shadow-glow);
+  }
+}
+@utility receipt-paper {
+  /* =========================================================
+     ✅ RECEIPT FIX — ALWAYS WHITE PAPER
+  ========================================================= */
+  @apply bg-white text-black font-mono text-sm p-4 rounded-lg border border-neutral-200;
+  background: repeating-linear-gradient(
+    180deg,
+    #ffffff,
+    #ffffff 1px,
+    #f5f5f5 1px,
+    #f5f5f5 2px
+  );
+
+  :root:not(.light) & {
+    @apply border-border shadow-md;
+  }
+}
+
+/* =========================================================
+   THEME VARIABLES
+========================================================= */
+@layer base {
+  :root {
+    --color-gray-0: #18212f;
+    --background: 20 14% 4%;
+    --foreground: 60 9% 98%;
+
+    --card: 20 14% 7%;
+    --card-foreground: 60 9% 98%;
+
+    --popover: 20 14% 7%;
+    --popover-foreground: 60 9% 98%;
+
+    --primary: 32 95% 55%;
+    --primary-foreground: 20 14% 4%;
+
+    --secondary: 20 14% 12%;
+    --secondary-foreground: 60 9% 98%;
+
+    --muted: 20 14% 15%;
+    --muted-foreground: 20 10% 55%;
+
+    --accent: 32 95% 55%;
+    --accent-foreground: 20 14% 4%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 60 9% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 60 9% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 20 14% 4%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 60 9% 98%;
+
+    --border: 20 14% 14%;
+    --input: 20 14% 14%;
+    --ring: 32 95% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 20 14% 5%;
+    --sidebar-foreground: 60 9% 98%;
+    --sidebar-primary: 32 95% 55%;
+    --sidebar-primary-foreground: 20 14% 4%;
+    --sidebar-accent: 20 14% 10%;
+    --sidebar-accent-foreground: 60 9% 98%;
+    --sidebar-border: 20 14% 12%;
+    --sidebar-ring: 32 95% 55%;
+
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    --shadow-glow: 0 0 20px hsl(32 95% 55% / 0.15);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.25);
+    --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.4);
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(32 95% 55%),
+      hsl(25 95% 45%)
+    );
+    --color-grey-500: #9ca3af;
+    --color-grey-200: #374151;
+
+    --gradient-card: linear-gradient(180deg, hsl(20 14% 8%), hsl(20 14% 6%));
+
+    --gradient-overlay: linear-gradient(
+      180deg,
+      transparent,
+      hsl(20 14% 4% / 0.8)
+    );
+  }
+
+  /* =========================================================
+     LIGHT THEME
+  ========================================================= */
+  .light {
+    --color-gray-0: #fff;
+
+    --background: 60 9% 98%;
+    --foreground: 20 14% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 4%;
+
+    --primary: 32 95% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 14% 96%;
+    --secondary-foreground: 20 14% 4%;
+
+    --muted: 20 14% 94%;
+    --muted-foreground: 20 10% 40%;
+
+    --accent: 32 95% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 20 14% 4%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 20 14% 90%;
+    --input: 20 14% 90%;
+    --ring: 32 95% 45%;
+
+    --sidebar-background: 60 9% 98%;
+    --sidebar-foreground: 20 14% 4%;
+    --sidebar-primary: 32 95% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 14% 92%;
+    --sidebar-accent-foreground: 20 14% 4%;
+    --sidebar-border: 20 14% 88%;
+    --sidebar-ring: 32 95% 45%;
+
+    --shadow-glow: 0 0 16px hsl(32 95% 45% / 0.12);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.08);
+    --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.12);
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(32 95% 45%),
+      hsl(25 95% 40%)
+    );
+    --color-grey-200: #e5e7eb;
+
+    --color-grey-500: #6b7280;
+
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(20 14% 97%));
+
+    --gradient-overlay: linear-gradient(
+      180deg,
+      transparent,
+      hsl(60 9% 98% / 0.85)
+    );
+  }
+}
+
+/* =========================================================
+   BASE STYLES
+========================================================= */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+@layer utilities {
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-primary);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+}
+
+/* =========================================================
+   COMPONENTS
+========================================================= */
+@layer components {
+  .stat-card {
+    @apply relative overflow-hidden rounded-xl border border-border bg-card p-6;
+    box-shadow: var(--shadow-card);
+  }
+
+  .stat-card::before {
+    content: "";
+    @apply absolute inset-0 opacity-50;
+    background: var(--gradient-card);
+  }
+
+  .pos-item {
+    @apply relative overflow-hidden rounded-xl border border-border bg-card p-4 cursor-pointer transition-all duration-200;
+  }
+
+  .pos-item:hover {
+    @apply border-primary/50;
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* =========================================================
+     ✅ RECEIPT FIX — ALWAYS WHITE PAPER
+  ========================================================= */
+  .receipt-paper {
+    @apply bg-white text-black font-mono text-sm p-4 rounded-lg border border-neutral-200;
+    background: repeating-linear-gradient(
+      180deg,
+      #ffffff,
+      #ffffff 1px,
+      #f5f5f5 1px,
+      #f5f5f5 2px
+    );
+  }
+  @layer base {
+    button:disabled {
+      @apply opacity-60 cursor-not-allowed;
+    }
+
+    input:disabled,
+    select:disabled,
+    textarea:disabled {
+      @apply bg-muted text-muted-foreground cursor-not-allowed;
+    }
+  }
+
+  :root:not(.light) .receipt-paper {
+    @apply border-border shadow-md;
+  }
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "_id": "6941408cc6b86d4b06b95551",
+    "name": "Spring Rolls",
+    "description": "Crispy vegetable spring rolls",
+    "price": 4.5,
+    "category": "693d6e96db623e37bb2df507",
+    "image": "https://images.unsplash.com/photo-1604909052743-94e838986d24",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95552",
+    "name": "Garlic Bread",
+    "description": "Toasted bread with garlic butter",
+    "price": 3,
+    "category": "693d6e96db623e37bb2df507",
+    "image": "https://images.unsplash.com/photo-1604908177522-040e4c1a4e3a",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95553",
+    "name": "Chicken Soup",
+    "description": "Warm chicken soup with vegetables",
+    "price": 5,
+    "category": "693d6e96db623e37bb2df508",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95554",
+    "name": "Tomato Soup",
+    "description": "Creamy tomato soup",
+    "price": 4,
+    "category": "693d6e96db623e37bb2df508",
+    "image": "https://images.unsplash.com/photo-1604908177225-6f9a1c8c0b74",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95555",
+    "name": "Caesar Salad",
+    "description": "Romaine lettuce with Caesar dressing",
+    "price": 6,
+    "category": "693d6e96db623e37bb2df509",
+    "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95556",
+    "name": "Grilled Beef Steak",
+    "description": "Juicy grilled beef steak",
+    "price": 15,
+    "category": "693d6e96db623e37bb2df50a",
+    "image": "https://images.unsplash.com/photo-1604908177091-82caa52f49b2",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95557",
+    "name": "Classic Beef Burger",
+    "description": "Beef patty with cheese and lettuce",
+    "price": 8,
+    "category": "693d6e96db623e37bb2df50b",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95558",
+    "name": "Chicken Burger",
+    "description": "Grilled chicken burger",
+    "price": 7,
+    "category": "693d6e96db623e37bb2df50b",
+    "image": "https://images.unsplash.com/photo-1606755962773-0c6f8c4f8a2e",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95559",
+    "name": "Margherita Pizza",
+    "description": "Cheese and tomato pizza",
+    "price": 10,
+    "category": "693d6e96db623e37bb2df50c",
+    "image": "https://images.unsplash.com/photo-1548365328-8bdb6a4f0a6c",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95560",
+    "name": "Spaghetti Bolognese",
+    "description": "Pasta with meat sauce",
+    "price": 11,
+    "category": "693d6e96db623e37bb2df50d",
+    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95561",
+    "name": "Grilled Salmon",
+    "description": "Fresh grilled salmon fish",
+    "price": 14,
+    "category": "693d6e96db623e37bb2df50e",
+    "image": "https://images.unsplash.com/photo-1604908177081-1f42e3e7b1d6",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95562",
+    "name": "Club Sandwich",
+    "description": "Chicken club sandwich",
+    "price": 6,
+    "category": "693d6e96db623e37bb2df50f",
+    "image": "https://images.unsplash.com/photo-1550507992-eb63ffee0847",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95563",
+    "name": "Fried Eggs & Toast",
+    "description": "Two eggs with toasted bread",
+    "price": 4,
+    "category": "693d6e96db623e37bb2df510",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95564",
+    "name": "Chocolate Cake",
+    "description": "Rich chocolate cake slice",
+    "price": 5,
+    "category": "693d6e96db623e37bb2df512",
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95565",
+    "name": "Fresh Orange Juice",
+    "description": "Freshly squeezed orange juice",
+    "price": 3,
+    "category": "693d6e96db623e37bb2df513",
+    "image": "https://images.unsplash.com/photo-1571687949920-bc2b4d0d3b11",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95566",
+    "name": "Cappuccino",
+    "description": "Hot cappuccino coffee",
+    "price": 3.5,
+    "category": "693d6e96db623e37bb2df514",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95567",
+    "name": "Vegan Bowl",
+    "description": "Mixed vegetables with rice",
+    "price": 7,
+    "category": "693d6e96db623e37bb2df518",
+    "image": "https://images.unsplash.com/photo-1546069901-eacef0df6022",
+    "available": true
+  },
+  {
+    "_id": "6941408cc6b86d4b06b95568",
+    "name": "Kids Chicken Nuggets",
+    "description": "Small portion chicken nuggets",
+    "price": 5,
+    "category": "693d6e96db623e37bb2df51a",
+    "image": "https://images.unsplash.com/photo-1606755962773-0c6f8c4f8a2e",
+    "available": true
+  }
+]

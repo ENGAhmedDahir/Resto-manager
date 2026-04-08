@@ -1,0 +1,84 @@
+[
+  {
+    "customerName": "Ali Hassan",
+    "orderType": "dine-in",
+    "tableNumber": "T1",
+    "paymentMethod": "Cash",
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9c1111111", "quantity": 2, "price": 5 },
+      { "menuItem": "66b9f2b7e1c2c9a9c2222222", "quantity": 1, "price": 3 }
+    ]
+  },
+  {
+    "customerName": "Amina Noor",
+    "orderType": "takeaway",
+    "paymentMethod": "Mobile Money",
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9c3333333", "quantity": 1, "price": 6 }
+    ]
+  },
+  {
+    "customerName": "Mohamed Ali",
+    "orderType": "delivery",
+    "customerPhone": "0612345678",
+    "deliveryAddress": { "fullAddress": "Hodan, Mogadishu" },
+    "paymentMethod": "Cash",
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9c4444444", "quantity": 3, "price": 4 }
+    ]
+  },
+  {
+    "customerName": "Fatima Yusuf",
+    "orderType": "dine-in",
+    "tableNumber": "T3",
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9c5555555", "quantity": 2, "price": 7 }
+    ]
+  },
+  {
+    "customerName": "Abdi Rahman",
+    "orderType": "takeaway",
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9c6666666", "quantity": 1, "price": 8 }
+    ]
+  },
+  {
+    "customerName": "Hodan Ahmed",
+    "orderType": "delivery",
+    "deliveryAddress": { "fullAddress": "Wadajir, Mogadishu" },
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9c7777777", "quantity": 2, "price": 5 }
+    ]
+  },
+  {
+    "customerName": "Omar Farah",
+    "orderType": "dine-in",
+    "tableNumber": "T5",
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9c8888888", "quantity": 1, "price": 10 }
+    ]
+  },
+  {
+    "customerName": "Safiya Ali",
+    "orderType": "takeaway",
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9c9999999", "quantity": 2, "price": 6 }
+    ]
+  },
+  {
+    "customerName": "Yusuf Aden",
+    "orderType": "dine-in",
+    "tableNumber": "T8",
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9caaaaaaa", "quantity": 3, "price": 3 }
+    ]
+  },
+  {
+    "customerName": "Khadija Omar",
+    "orderType": "delivery",
+    "deliveryAddress": { "fullAddress": "Karaan, Mogadishu" },
+    "items": [
+      { "menuItem": "66b9f2b7e1c2c9a9cbbbbbbb", "quantity": 2, "price": 9 }
+    ]
+  }
+]
