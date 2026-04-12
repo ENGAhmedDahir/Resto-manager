@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Setting from "./settingModel.js"; // ✅ muhiim
 
 const menuItemSchema = new mongoose.Schema(
   {
@@ -34,10 +35,8 @@ const menuItemSchema = new mongoose.Schema(
 );
 
 menuItemSchema.pre("save", async function (next) {
-  // If taxRate is not explicitly modified, fetch from settings
   if (this.isNew || !this.isModified("taxRate")) {
-    const Setting = mongoose.model("Setting");
-    const settings = await Setting.findOne();
+    const settings = await Setting.findOne(); // ✅ fix
     if (settings) {
       this.taxRate = settings.taxRate;
     }
