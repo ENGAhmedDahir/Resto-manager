@@ -8,7 +8,7 @@ import User from "../models/userModel.js";
 import AppError from "../utils/appError.js";
 import { CatchAsync } from "../utils/CatchAsync.js";
 import jwt from "jsonwebtoken";
-import { Email } from "../utils/Email.js";
+import { Email } from "../utils/email.js";
 
 const signToken = (id) => {
   return jwt.sign({ id }, JWT_SECRET, {
