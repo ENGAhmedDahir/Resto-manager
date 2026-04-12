@@ -9,7 +9,7 @@ import { POSCart } from "./POSCart";
 import { useState } from "react";
 import CategoriesList from "./CategoriesList";
 import CheckOut from "./CheckOut";
-import MenuSkeleton from "@/components/ui_components/skeleton/MenuSkeleton";
+import MenuSkeleton from "@/components/ui_components/skeleton/MenuSkeleton.jsx";
 import LoadingSpinner from "@/components/ui_components/LoadingSpinner";
 
 function Menus() {
