@@ -48,10 +48,6 @@ app.use("/api/v1/tables", tableRouter);
 app.use("/api/v1/settings", settingRouter);
 app.use("/api/v1/category-inventory", categoryInventoryRouter);
 
-app.all(/.*/, (req, res, next) => {
-  next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
-});
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
@@ -59,6 +55,10 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
+
+app.all("*", (req, res, next) => {
+  next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
+});
 app.use(golobalError);
 
 const PORT = 8000;
