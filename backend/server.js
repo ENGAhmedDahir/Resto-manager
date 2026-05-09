@@ -51,12 +51,12 @@ app.use("/api/v1/category-inventory", categoryInventoryRouter);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-  app.get("*", (req, res) => {
+  app.get("/{*any}", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
 
-app.all("*", (req, res, next) => {
+app.all("/{*any}", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
 app.use(golobalError);

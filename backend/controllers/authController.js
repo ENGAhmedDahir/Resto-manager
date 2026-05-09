@@ -58,7 +58,8 @@ export const signup = CatchAsync(async (req, res, next) => {
   });
   await new Email(newUser).sendVerificationCode();
 
-  createSendToken(newUser, 201, res);
+  // createSendToken(newUser, 201, res);
+  res.status(201).json({ newUser });
 });
 
 export const login = CatchAsync(async (req, res, next) => {

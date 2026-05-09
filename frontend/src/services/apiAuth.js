@@ -17,32 +17,17 @@ export async function signup(newUser) {
   try {
     const { data } = await axiosInstance.post(
       "/users/signup",
-      newUser // ✅ send directly
+      newUser, // ✅ send directly
     );
     console.log(data);
     return data;
   } catch (error) {
     throw new Error(
-      error.response?.data?.message || error.message || "Failed to signup"
+      error.response?.data?.message || error.message || "Failed to signup",
     );
   }
 }
 
-// export async function signup({ username, email, password, role }) {
-//   try {
-//     const { data } = await axiosInstance.post("/users/signup", {
-//       username,
-//       email,
-//       password,
-//       role,
-//     });
-//     return data;
-//   } catch (error) {
-//     throw new Error(
-//       error.response?.data?.message || error.message || "Failed to Login"
-//     );
-//   }
-// }
 export async function getCurrentUser() {
   try {
     const { data } = await axiosInstance.get("users/getLogin-user");
@@ -50,7 +35,7 @@ export async function getCurrentUser() {
     return data;
   } catch (error) {
     throw new Error(
-      error.response?.data?.message || error.message || "Failed to Login"
+      error.response?.data?.message || error.message || "Failed to Login",
     );
   }
 }
@@ -61,7 +46,7 @@ export async function getUsers() {
     return data.data;
   } catch (error) {
     throw new Error(
-      error.response?.data?.message || error.message || "Failed to get users"
+      error.response?.data?.message || error.message || "Failed to get users",
     );
   }
 }
@@ -72,7 +57,7 @@ export async function getUser(id) {
     return data.data;
   } catch (error) {
     throw new Error(
-      error.response?.data?.message || error.message || "Failed to get user"
+      error.response?.data?.message || error.message || "Failed to get user",
     );
   }
 }
@@ -80,7 +65,7 @@ export async function updateUser({ id, updatedUser }) {
   try {
     const res = await axiosInstance.put(
       `/users/update-user/${id}`,
-      updatedUser
+      updatedUser,
     );
 
     return res.data;
@@ -88,7 +73,7 @@ export async function updateUser({ id, updatedUser }) {
     throw new Error(
       error.response?.data?.message ||
         error.message ||
-        "Failed to update user Data"
+        "Failed to update user Data",
     );
   }
 }
@@ -108,7 +93,7 @@ export async function updateUserPassword({ id, currentPassword, newPassword }) {
     throw new Error(
       error.response?.data?.message ||
         error.message ||
-        "Failed to update user password"
+        "Failed to update user password",
     );
   }
 }
@@ -118,7 +103,7 @@ export async function deleteUser(id) {
     await axiosInstance.delete(`/users/delete-user/${id}`);
   } catch (error) {
     throw new Error(
-      error.response?.data?.message || error.message || "Failed to delete user"
+      error.response?.data?.message || error.message || "Failed to delete user",
     );
   }
 }
