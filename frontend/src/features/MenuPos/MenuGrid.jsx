@@ -9,7 +9,7 @@ export function MenuGrid({ items, className }) {
     <div className="overflow-y-auto  h-[calc(100vh-180px)] px-2 ">
       <div
         className={cn(
-          " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 pb-6",
+          " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 pb-6",
           className,
         )}
       >

@@ -30,7 +30,7 @@ function InventoryTable() {
     queryKey: ["inventory"],
     queryFn: getInventory,
   });
-
+  // console.log(inventory);
   const columns = [
     {
       key: "itemName",
@@ -38,7 +38,12 @@ function InventoryTable() {
       sortable: true,
       className: "font-medium",
     },
-    { key: "category", header: "Category", sortable: true },
+    {
+      key: "category",
+      header: "Category",
+      sortable: true,
+      render: (value, row) => <span>{row.category?.name || "N/A"}</span>,
+    },
     { key: "supplier", header: "Supplier", sortable: true },
     { key: "unit", header: "Unit", sortable: true },
     { key: "quantity", header: "Quantity", sortable: true },
